@@ -1,0 +1,324 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #fff6f8, #ffe4ea);
+    margin: 0;
+    padding-top: 80px;
+}
+
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #8b5e3c;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header nav a:hover {
+    color: #ffd1dc;
+}
+
+/* LOGOUT */
+.logout-btn {
+    background: #d8a48f;
+    border: none;
+    padding: 8px 12px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 30px;
+}
+
+.logout-btn:hover {
+    background: #c0846a;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1608198093002-ad4e005484ec') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    max-width: 600px;
+    animation: fadeUp 1s ease;
+}
+
+.hero-content h2 {
+    font-size: 38px;
+}
+
+.hero-content p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.hero-content button {
+    padding: 12px 20px;
+    background: #d8a48f;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.hero-content button:hover {
+    background: #c0846a;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+}
+
+/* PRODUK */
+.products {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* CARD (FIX TOTAL) */
+.card {
+    background: white;
+    padding: 15px;
+    width: 180px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    animation: fadeUp 0.5s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+/* GAMBAR (INI FIX UTAMA) */
+.card img {
+    width: 100%;
+    height: 160px;        /* bikin semua sama tinggi */
+    object-fit: cover;    /* biar ga gepeng */
+    border-radius: 10px;
+}
+
+/* BUTTON */
+button {
+    background: #d8a48f;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #c0846a;
+}
+
+/* CART */
+.cart {
+    width: 30%;
+    background: #ffe4ea;
+    padding: 20px;
+    border-left: 2px solid #eee;
+}
+
+#cart-list {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-list li {
+    background: white;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 8px;
+    animation: fadeUp 0.3s ease;
+}
+
+/* ABOUT */
+.about {
+    padding: 30px;
+}
+
+/* FOOTER */
+.footer {
+    background: #8b5e3c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ANIMASI */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* LOGIN PAGE */
+.login-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f5e6dc, #fff6f8);
+}
+
+.login-wrapper {
+    width: 800px;
+    height: 450px;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.login-design {
+    width: 40%;
+    background: linear-gradient(135deg, #8b5e3c, #d8a48f);
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.login-design::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: rgba(255,255,255,0.08);
+    transform: rotate(45deg);
+    top: -50%;
+    left: -50%;
+}
+
+.login-form-box {
+    width: 60%;
+    background: #fff;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.login-form-box input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    background: transparent;
+}
+
+.login-form-box input:focus {
+    border-bottom: 2px solid #8b5e3c;
+}
+
+.login-form-box button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #d8a48f;
+    border-radius: 20px;
+}
+
+.login-form-box button:hover {
+    background: #8b5e3c;
+}
+
+.tabs button {
+    background: none;
+    border: none;
+    margin: 5px;
+    color: #8b5e3c;
+    cursor: pointer;
+}
+
+#msg {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.login-design {
+    z-index: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .products,
+    .cart {
+        width: 100%;
+    }
+
+    .login-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .login-design {
+        width: 100%;
+        height: 150px;
+    }
+
+    .login-form-box {
+        width: 100%;
+    }
+}

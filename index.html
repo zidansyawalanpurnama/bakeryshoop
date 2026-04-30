@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bakery Shop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+if (localStorage.getItem("login") !== "true") {
+    window.location.href = "login.html";
+}
+</script>
+    
+<header class="header">
+<h1>🍞 Bakery Shop</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="product.html">Produk</a>
+<a href="about.html">About Us</a>
+</nav>
+<button onclick="logout()" class="logout-btn">Logout</button>
+</header>
+
+<!-- HERO SECTION -->
+<div class="hero">
+    <div class="hero-content">
+        <h2>Bakery Shop — Fresh & Handmade Everyday 🍞</h2>
+
+        <p>
+            Selamat datang di Bakery Shop, tempat di mana setiap roti dibuat dengan penuh cinta dan bahan berkualitas terbaik. 
+            Kami menghadirkan berbagai pilihan roti kekinian dengan tekstur lembut, aroma harum, dan rasa yang memanjakan lidah. 
+            Mulai dari roti manis, gurih, hingga varian premium dengan topping favorit seperti coklat lumer, keju, dan matcha. 
+            Cocok untuk teman santai, hadiah spesial, atau sekadar menikmati momen manis dalam harimu.
+        </p>
+
+        <p>
+            Nikmati sensasi roti fresh yang baru dipanggang setiap hari, dengan tampilan yang estetik dan rasa yang bikin ketagihan. 
+            Yuk, temukan favoritmu sekarang dan rasakan pengalaman bakery yang berbeda!
+        </p>
+
+        <a href="product.html">
+            <button>Belanja Sekarang 🛒</button>
+        </a>
+    </div>
+</div>
+
+<footer class="footer">
+<p>📞 WA: 085721004602</p>
+<p>📷 IG: @bakery_shop</p>
+<p>© 2026 Bakery Shop</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

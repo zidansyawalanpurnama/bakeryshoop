@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login - Bakery Shop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+<div class="login-wrapper">
+
+    <!-- LEFT DESIGN -->
+    <div class="login-design">
+        <h2>Welcome</h2>
+        <p>Login ke Bakery Shop untuk menikmati roti terbaik 🍞</p>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="login-form-box">
+
+        <div class="icon">👤</div>
+        <h2>LOGIN</h2>
+
+        <div class="tabs">
+            <button onclick="showLogin()">Login</button>
+            <button onclick="showRegister()">Register</button>
+        </div>
+
+        <!-- LOGIN -->
+        <div id="login-form">
+            <input type="text" id="login-user" placeholder="Username">
+            <input type="password" id="login-pass" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+
+        <!-- REGISTER -->
+        <div id="register-form" style="display:none;">
+            <input type="text" id="reg-user" placeholder="Username">
+            <input type="password" id="reg-pass" placeholder="Password">
+            <button onclick="register()">Daftar</button>
+        </div>
+
+        <p id="msg"></p>
+
+    </div>
+
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>
